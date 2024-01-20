@@ -33,11 +33,17 @@ a {
 .primary-button {
   border-radius: 0.5rem;
   background-color: var(--primary-yellow);
+  color: var(--highlight-black);
   padding-block: 0.25rem;
   padding-inline: 0.5rem;
   border: 0;
   font-weight: 600;
   cursor: pointer;
+
+  a {
+    color: var(--highlight-black);
+    text-decoration: auto;
+  }
 }
 
 .text-light {

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import heroImage from 'assets/restaurant-food.jpg';
 
 import './styles.css';
@@ -12,7 +14,9 @@ const CallToAction = () => {
           We are a family owned mediterranean restaurant, focused on traditional
           recipes served with a modern twist.
         </p>
-        <button className='primary-button'>Reserve a Table</button>
+        <button className='primary-button'>
+          <Link to='booking'>Reserve a Table</Link>
+        </button>
       </div>
       <img src={heroImage} alt='Food' className='hero-image' />
     </section>

@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import footerImg from 'assets/footer-img.png';
+
 import './styles.css';
 
 const ListSection = ({ title = '', list = [] }) => {
@@ -77,7 +79,7 @@ const socialMediaLinks = [
 const Footer = () => {
   return (
     <footer className='footer grid'>
-      <img src='footer_logo' alt='Footer Img' id='footer-logo' />
+      <img src={footerImg} alt='Footer Img' id='footer-logo' />
       <ListSection title='Doormat Navigation' list={doormatNavLinks} />
       <ListSection title='Contact' list={contactNavLinks} />
       <ListSection title='Social Media' list={socialMediaLinks} />
