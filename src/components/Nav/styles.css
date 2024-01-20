@@ -1,0 +1,16 @@
+.nav {
+  grid-column: 5 / span 6;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+
+  a {
+    font-weight: 600;
+    color: black;
+  }
+}

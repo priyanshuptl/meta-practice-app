@@ -1,0 +1,22 @@
+#root {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding-inline: 2rem;
+}
+
+ul.no-default-style {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    text-decoration: auto;
+  }
+}

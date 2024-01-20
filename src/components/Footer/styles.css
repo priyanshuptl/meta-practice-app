@@ -1,0 +1,21 @@
+.footer {
+  #footer-logo {
+    grid-column: 3 / span 2;
+  }
+
+  .nav-links {
+    grid-column: span 2;
+
+    h5 {
+      margin: 0;
+    }
+
+    a {
+      color: gray;
+    }
+
+    a:hover {
+      color: rgb(100, 100, 100);
+    }
+  }
+}
