@@ -1,5 +1,11 @@
+import CallToAction from 'components/CallToAction';
+
 const Homepage = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <CallToAction />
+    </>
+  );
 };
 
 export default Homepage;

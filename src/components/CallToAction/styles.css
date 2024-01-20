@@ -1,0 +1,32 @@
+.call-to-action {
+  background-color: var(--primary-green);
+  color: white;
+  margin-bottom: 4rem;
+
+  .left-panel {
+    grid-column: 3 / span 3;
+    padding-block: 1rem;
+
+    h1,
+    h3 {
+      margin: 0;
+    }
+
+    h1 {
+      color: var(--primary-yellow);
+    }
+
+    h3 {
+      font-weight: 400;
+    }
+  }
+
+  .hero-image {
+    grid-column: 8 / span 3;
+    width: 96%;
+    max-height: 15rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    transform: translate(0, 2rem) scale(1.04);
+  }
+}

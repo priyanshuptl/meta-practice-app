@@ -1,3 +1,12 @@
+:root {
+  --primary-green: #495e57;
+  --primary-yellow: #f4ce14;
+  --secondary-orange: #ee9972;
+  --secondary-yellow: #fbdabb;
+  --highlight-white: #edefee;
+  --highlight-black: #333333;
+}
+
 #root {
   min-height: 100vh;
   max-height: 100vh;
@@ -19,4 +28,14 @@ ul.no-default-style {
   a {
     text-decoration: auto;
   }
+}
+
+.primary-button {
+  border-radius: 1rem;
+  background-color: var(--primary-yellow);
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
 }
