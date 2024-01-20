@@ -1,5 +1,8 @@
 .footer {
+  margin-top: 1rem;
+  background-color: var(--primary-green);
   padding-block: 2rem;
+  color: var(--highlight-white);
 
   #footer-logo {
     grid-column: 3 / span 2;
@@ -15,11 +18,11 @@
     }
 
     a {
-      color: gray;
+      color: #dedede;
     }
 
     a:hover {
-      color: rgb(100, 100, 100);
+      color: rgb(181, 181, 181);
     }
   }
 }

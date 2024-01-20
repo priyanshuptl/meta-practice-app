@@ -105,7 +105,7 @@ const BookingForm = () => {
         </select>
       </div>
       <button className='primary-button' type='submit'>
-        Make Your reservation
+        Book Now
       </button>
     </form>
   );
