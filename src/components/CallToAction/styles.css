@@ -7,11 +7,6 @@
     grid-column: 3 / span 3;
     padding-block: 1rem;
 
-    h1,
-    h3 {
-      margin: 0;
-    }
-
     h1 {
       color: var(--primary-yellow);
     }

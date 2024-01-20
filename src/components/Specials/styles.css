@@ -1,0 +1,21 @@
+.specials {
+  margin-bottom: 3rem;
+
+  .heading {
+    grid-column: 3 / span 8;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding-inline: 1rem;
+    }
+  }
+
+  .cards {
+    grid-column: 3 / span 8;
+    display: flex;
+    gap: 1rem;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}

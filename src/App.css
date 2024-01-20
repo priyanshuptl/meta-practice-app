@@ -24,18 +24,31 @@ ul.no-default-style {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
 
-  a {
-    text-decoration: auto;
-  }
+a {
+  text-decoration: auto;
 }
 
 .primary-button {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: var(--primary-yellow);
   padding-block: 0.25rem;
   padding-inline: 0.5rem;
   border: 0;
   font-weight: 600;
   cursor: pointer;
+}
+
+.text-light {
+  color: #626262;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
