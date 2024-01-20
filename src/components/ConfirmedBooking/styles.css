@@ -1,0 +1,11 @@
+.confirmed-booking {
+  background-color: green;
+  margin-top: 1rem;
+
+  h1 {
+    grid-column: 3 / span 8;
+    text-align: center;
+    padding: 5rem;
+    color: white;
+  }
+}

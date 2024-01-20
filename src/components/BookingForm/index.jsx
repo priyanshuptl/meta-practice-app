@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 
 import BookingDetailContext from 'contexts/BookingDetailContext';
+import { submitAPI } from 'utils/apiMocks';
+import { useNavigate } from 'react-router-dom';
 
 import './styles.css';
 
@@ -19,10 +21,12 @@ const BookingForm = () => {
     availableTimes,
     dispatch,
   } = useContext(BookingDetailContext);
+  const navigate = useNavigate();
 
   const dateChangeHandler = (e) => {
-    dispatch({ type: 'reset' });
-    setDate(e.target.value);
+    const { value } = e.target;
+    dispatch({ type: 'update', date: new Date(value) });
+    setDate(value);
   };
 
   const timeChangeHandler = (e) => {
@@ -40,15 +44,19 @@ const BookingForm = () => {
   const submitFormHandler = (e) => {
     e.preventDefault();
 
-    console.log({
+    submitAPI({
       date,
       time,
       guests,
       occasion,
-    });
+    }).then((res) => {
+      if (res) {
+        dispatch({ type: 'reserve', time });
+        setTime('');
 
-    dispatch({ type: 'reserve', time });
-    setTime('');
+        navigate('/confirmed-booking');
+      }
+    });
   };
 
   return (
@@ -104,7 +112,7 @@ const BookingForm = () => {
           ))}
         </select>
       </div>
-      <button className='primary-button' type='submit'>
+      <button className='primary-button' type='submit' aria-label='On Click'>
         Book Now
       </button>
     </form>

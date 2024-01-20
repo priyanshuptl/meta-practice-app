@@ -5,20 +5,13 @@ import Homepage from 'components/Homepage';
 import BookingPage from 'components/BookingPage';
 import { BookingDetailContextProvider } from 'contexts/BookingDetailContext';
 import { occasions } from 'components/BookingForm';
+import { fetchAPI } from 'utils/apiMocks';
+import ConfirmedBooking from 'components/ConfirmedBooking';
 
 import './styles.css';
 
-const availableTimesInADay = [
-  '17:00',
-  '18:00',
-  '19:00',
-  '20:00',
-  '21:00',
-  '22:00',
-];
-
-const initializeTimes = () => {
-  return availableTimesInADay;
+export const initializeTimes = () => {
+  return fetchAPI(new Date());
 };
 
 const updateTimes = (state = [], action) => {
@@ -27,8 +20,8 @@ const updateTimes = (state = [], action) => {
       return state.filter((time) => time !== action.time);
     }
 
-    case 'reset': {
-      return availableTimesInADay;
+    case 'update': {
+      return fetchAPI(action.date);
     }
 
     default:
@@ -66,6 +59,7 @@ const Main = () => {
           <Route path='/about' element={<div>About</div>} />
           <Route path='/menu' element={<div>Menu</div>} />
           <Route path='/booking' element={<BookingPage />} />
+          <Route path='/confirmed-booking' element={<ConfirmedBooking />} />
           <Route path='/' element={<Homepage />} />
         </Routes>
       </main>
