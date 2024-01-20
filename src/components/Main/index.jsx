@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import { useReducer, useState } from 'react';
 
-import Homepage from 'components/Homepage';
-import BookingPage from 'components/BookingPage';
+import Homepage from 'pages/Homepage';
+import BookingPage from 'pages/BookingPage';
+import ConfirmedBooking from 'pages/ConfirmedBooking';
 import { BookingDetailContextProvider } from 'contexts/BookingDetailContext';
 import { occasions } from 'components/BookingForm';
 import { fetchAPI } from 'utils/apiMocks';
-import ConfirmedBooking from 'components/ConfirmedBooking';
 
 import './styles.css';
 
