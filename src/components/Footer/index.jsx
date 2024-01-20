@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './styles.css';
 
 const ListSection = ({ title = '', list = [] }) => {
@@ -7,7 +9,7 @@ const ListSection = ({ title = '', list = [] }) => {
       <ul className='no-default-style'>
         {list.map(({ label, href }) => (
           <li key={label}>
-            <a href={href}>{label}</a>
+            <Link to={href}>{label}</Link>
           </li>
         ))}
       </ul>
